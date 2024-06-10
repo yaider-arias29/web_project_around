@@ -1,0 +1,49 @@
+.profile{
+    display: flex;
+    justify-content: start;
+    padding-top: 30px;
+    padding-left: 310px;
+}
+
+.profile__image{
+    width: 169px;
+    height: 128px;
+    padding-right: 30px;
+}
+
+.profile__name{
+    width: 373px;
+    font-family: Inter;
+    font-size: 42px;
+    font-weight: 500;
+    line-height: 0px;
+    text-align: left;
+    color: #fff;
+}
+
+.profile__ocupation{
+    width: 372px;
+    font-family: Inter;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 10px;
+    text-align: left;
+    color: #fff;
+}
+
+.profile__edit{
+    width: 24px;
+    height: 24px;
+    background-color: black;
+    border: none;
+    padding-top: 35px;
+}
+
+.profile__add{
+    width: 150px;
+    height: 50px;
+    background-color: black;
+    border: none;
+    padding-top: 35px;
+    padding-left: 150px;
+}
