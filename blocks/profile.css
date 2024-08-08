@@ -6,8 +6,8 @@
 }
 
 .profile__image{
-    width: 169px;
-    height: 128px;
+    width: 120px;
+    height: 120px;
     padding-right: 30px;
 }
 
@@ -47,3 +47,30 @@
     padding-top: 35px;
     padding-left: 150px;
 }
+
+@media screen and (max-width: 320px){
+    .profile{
+        padding-left: 10px;
+        flex-direction: column;
+        width: 100%;
+    }
+    }
+
+    @media screen and (max-width: 320px) {
+        .profile__name{
+            width: 200px;
+            font-size: 20px;
+        } 
+    }
+
+    @media screen and (max-width: 320px) {
+        .profile__edit{
+            padding-top: 0px;
+        }
+    }
+
+    @media screen and (max-width: 320px) {
+        .profile__add{
+            padding-top: 10px;
+        }
+    }
