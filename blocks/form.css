@@ -1,0 +1,55 @@
+.form{
+    background-color: white;
+    width: 282px;
+    height: 322px;
+    list-style-type: none;
+    padding-left: 20px; 
+    padding-top: 30px;
+}
+
+.form__title{
+    font-family: Inter;
+    font-size: 18px;
+    font-weight: 900;
+    line-height: 21.78px;
+    text-align: left;
+    width: 238px;
+    padding-bottom: 60px;
+}
+
+.form__line{
+    width: 238px;
+    padding-bottom: 1px;
+    border-style: none;
+    background-color: #959595;
+}
+
+.form__name{
+    padding-top: 20px;
+    padding-left: 20px;
+    border: none;
+}
+
+.form__about{
+    padding-top: 20px;
+    padding-left: 20px;
+    border: none;   
+}
+
+.form__button{
+    width: 238px;
+    height: 46px;
+    background-color: black;
+    font-family: Inter;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16.94px;
+    text-align: center;
+    color: white;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+}
+
+

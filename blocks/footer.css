@@ -1,6 +1,6 @@
 .footer{
     width: 318px;
-    background-color: #545454;
+    background-color: black;
 }
 
 .footer__text{
@@ -9,7 +9,7 @@
     font-weight: 400;
     line-height: 21.78px;
     text-align: left;
-    color: #545454;
+    color: #fff;
 }
 
 @media screen and (max-width: 320px) {
