@@ -19,6 +19,7 @@
     line-height: 0px;
     text-align: left;
     color: #fff;
+    text-overflow: ellipsis;
 }
 
 .profile__ocupation{
@@ -29,6 +30,7 @@
     line-height: 10px;
     text-align: left;
     color: #fff;
+    text-overflow: ellipsis;
 }
 
 .profile__edit{

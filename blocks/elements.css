@@ -9,13 +9,14 @@
     flex-wrap: wrap;
 }
 
-.elements__card{
+.elements__cards{
     width: 282px;
 }
 
 .elements__image{
     width: 282px;
     height: 282px;
+    border-radius: 10%;
 }
 
 .elements__description{
