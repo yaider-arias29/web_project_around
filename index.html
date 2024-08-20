@@ -1,96 +1,154 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="todo sobre estados unidos">
-    <meta name="keywords" content="usa ciudades">
-    <meta name="author" content="yaider arias">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="todo sobre estados unidos" />
+    <meta name="keywords" content="usa ciudades" />
+    <meta name="author" content="yaider arias" />
     <title>around of usa</title>
-    <link rel="stylesheet" href="./page/index.css">
-</head>
-<body>
+    <link rel="stylesheet" href="./page/index.css" />
+  </head>
+  <body>
     <div class="page">
-        <div class="popup">
-            <button class="popup__button">
-                <img class="popup__icon-closed" src="./images/closed-button.png" alt="icon-closed">
-                </button>
-            <form class="form">
-                <p class="form__title">editar perfil</p>       
-              <input type="text" class="form__name" value="Jacques Cousteau" name="name" placeholder="nombre" id="input-name">
-              <hr class="form__line">
-              <input type="text" class="form__about" value="Explorador" name="name" placeholder="sobre mi" id="input-about">
-              <hr class="form__line">
-                <input type="submit" class="form__button">
-            </form>
-        </div>
-    <header class="header">
-      <img class="header__logo" src="./images/logo.svg" alt="logo-around">
-      <hr class="header__line"> 
-    </header>
-    <div class="profile">
-            <img class="profile__image" src="./images/Avatar.png" alt="image-profile">
+      <div class="popup">
+        <button class="popup__button">
+          <img
+            class="popup__icon-closed"
+            src="./images/closed-button.png"
+            alt="icon-closed"
+          />
+        </button>
+        <form class="form">
+          <p class="form__title">editar perfil</p>
+          <input
+            type="text"
+            class="form__name"
+            value="Jacques Cousteau"
+            name="name"
+            placeholder="nombre"
+            id="input-name"
+          />
+          <hr class="form__line" />
+          <input
+            type="text"
+            class="form__about"
+            value="Explorador"
+            name="name"
+            placeholder="sobre mi"
+            id="input-about"
+          />
+          <hr class="form__line" />
+          <input type="submit" class="form__button" />
+        </form>
+      </div>
+      <header class="header">
+        <img class="header__logo" src="./images/logo.svg" alt="logo-around" />
+        <hr class="header__line" />
+      </header>
+      <div class="profile">
+        <img
+          class="profile__image"
+          src="./images/Avatar.png"
+          alt="image-profile"
+        />
         <div class="profile__info">
-            <p class="profile__name">Jacques Cousteau</p>
-            <p class="profile__ocupation">Explorador</p>
+          <p class="profile__name">Jacques Cousteau</p>
+          <p class="profile__ocupation">Explorador</p>
         </div>
         <button class="profile__edit">
-        <img class="profile__icon-edit" src="./images/Edit-Button.png" alt="icon-edit">
+          <img
+            class="profile__icon-edit"
+            src="./images/Edit-Button.png"
+            alt="icon-edit"
+          />
         </button>
         <button class="profile__add">
-            <img class="profile__icon-add" src="./images/Add-Button.png" alt="icon-add">
+          <img
+            class="profile__icon-add"
+            src="./images/Add-Button.png"
+            alt="icon-add"
+          />
         </button>
-    </div>
-    <section class="elements">
+      </div>
+      <section class="elements">
         <div class="elements__container">
-            <div class="elements__cards">
-                <img class="elements__image" src="./images/valle.jpg" alt="image-valle">
-                <div class="elements__description">
-                    <p class="elements__title">Valle de Yosemite</p>
-                    <img class="elements__icon" src="./images/Group.png" alt="like-icon">
-                </div>
+          <div class="elements__cards">
+            <img
+              class="elements__image"
+              src="./images/valle.jpg"
+              alt="image-valle"
+            />
+            <div class="elements__description">
+              <p class="elements__title">Valle de Yosemite</p>
+              <img
+                class="elements__icon"
+                src="./images/Group.png"
+                alt="like-icon"
+              />
             </div>
-            <div class="elements__cards">
-                <img class="elements__image" src="./images/lago.jpg" alt="">
-                <div class="elements__description">
-                    <p class="elements__title">Lago Louise</p>
-                    <img class="elements__icon" src="./images/Group.png" alt="like-icon">
-                </div>
-                </div>
-                <div class="elements__cards">
-                    <img class="elements__image" src="./images/montañas.jpg" alt="">
-                    <div class="elements__description">
-                        <p class="elements__title">Montañas Calvas</p>
-                        <img class="elements__icon" src="./images/Group.png" alt="like-icon">
-                    </div>
-                </div>
-                <div class="elements__cards">
-                    <img class="elements__image" src="./images/latemar.jpg" alt="">
-                    <div class="elements__description">
-                        <p class="elements__title">Latemar</p>
-                        <img class="elements__icon" src="./images/Group.png" alt="like-icon">
-                    </div>
-                </div>
-                <div class="elements__cards">
-                    <img class="elements__image" src="./images/vanois.jpg" alt="">
-                    <div class="elements__description">
-                        <p class="elements__title">Vanois National...</p>
-                        <img class="elements__icon" src="./images/Group.png" alt="like-icon">
-                    </div>
-                </div>
-                <div class="elements__cards">
-                    <img class="elements__image" src="./images/lago-di.jpg" alt="">
-                    <div class="elements__description">
-                        <p class="elements__title">Lago di Braies</p>
-                        <img class="elements__icon" src="./images/Group.png" alt="like-icon">
-                    </div>
-                </div>
-                <footer class="footer">
-                    <p class="footer__text">© 2020 yaider arias</p>
-                </footer>
-                </div> 
-    </section>
+          </div>
+          <div class="elements__cards">
+            <img class="elements__image" src="./images/lago.jpg" alt="" />
+            <div class="elements__description">
+              <p class="elements__title">Lago Louise</p>
+              <img
+                class="elements__icon"
+                src="./images/Group.png"
+                alt="like-icon"
+              />
+            </div>
+          </div>
+          <div class="elements__cards">
+            <img class="elements__image" src="./images/montañas.jpg" alt="" />
+            <div class="elements__description">
+              <p class="elements__title">Montañas Calvas</p>
+              <img
+                class="elements__icon"
+                src="./images/Group.png"
+                alt="like-icon"
+              />
+            </div>
+          </div>
+          <div class="elements__cards">
+            <img class="elements__image" src="./images/latemar.jpg" alt="" />
+            <div class="elements__description">
+              <p class="elements__title">Latemar</p>
+              <img
+                class="elements__icon"
+                src="./images/Group.png"
+                alt="like-icon"
+              />
+            </div>
+          </div>
+          <div class="elements__cards">
+            <img class="elements__image" src="./images/vanois.jpg" alt="" />
+            <div class="elements__description">
+              <p class="elements__title">Vanois National...</p>
+              <img
+                class="elements__icon"
+                src="./images/Group.png"
+                alt="like-icon"
+              />
+            </div>
+          </div>
+          <div class="elements__cards">
+            <img class="elements__image" src="./images/lago-di.jpg" alt="" />
+            <div class="elements__description">
+              <p class="elements__title">Lago di Braies</p>
+              <img
+                class="elements__icon"
+                src="./images/Group.png"
+                alt="like-icon"
+              />
+            </div>
+          </div>
+          <footer class="footer">
+            <p class="footer__text">© 2020 yaider arias</p>
+          </footer>
+        </div>
+      </section>
     </div>
     <script src="./scripts/index.js"></script>
-</body>
+  </body>
 </html>

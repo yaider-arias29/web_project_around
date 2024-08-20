@@ -1,78 +1,66 @@
-.profile{
-    display: flex;
-    justify-content: start;
-    padding-top: 30px;
-    padding-left: 310px;
+.profile {
+  display: flex;
+  padding-top: 30px;
+  margin: auto;
 }
 
-.profile__image{
-    width: 120px;
-    height: 120px;
-    padding-right: 30px;
+.profile__image {
+  width: 120px;
+  height: 120px;
+  padding-right: 30px;
 }
 
-.profile__name{
-    width: 373px;
-    font-family: Inter;
-    font-size: 42px;
-    font-weight: 500;
-    line-height: 0px;
-    text-align: left;
-    color: #fff;
-    text-overflow: ellipsis;
+.profile__name {
+  font-family: Inter;
+  font-size: 42px;
+  font-weight: 500;
+  line-height: 0px;
+  text-align: left;
+  color: #fff;
+  text-overflow: ellipsis;
 }
 
-.profile__ocupation{
-    width: 372px;
-    font-family: Inter;
-    font-size: 18px;
-    font-weight: 400;
-    line-height: 10px;
-    text-align: left;
-    color: #fff;
-    text-overflow: ellipsis;
+.profile__ocupation {
+  font-family: Inter;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 10px;
+  text-align: left;
+  color: #fff;
+  text-overflow: ellipsis;
 }
 
-.profile__edit{
-    width: 24px;
-    height: 24px;
-    background-color: black;
-    border: none;
-    padding-top: 35px;
+.profile__edit {
+  width: 24px;
+  height: 24px;
+  background-color: black;
+  border: none;
+  padding-top: 35px;
 }
 
-.profile__add{
-    width: 150px;
-    height: 50px;
-    background-color: black;
-    border: none;
-    padding-top: 35px;
-    padding-left: 150px;
+.profile__add {
+  height: 50px;
+  background-color: black;
+  border: none;
+  padding-top: 35px;
+  padding-left: 80px;
 }
 
-@media screen and (max-width: 320px){
-    .profile{
-        padding-left: 10px;
-        flex-direction: column;
-        width: 100%;
-    }
-    }
+@media screen and (max-width: 500px) {
+  .profile {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .profile__name {
+    font-size: 20px;
+  }
+  .profile__add {
+    padding: 0;
+    padding-top: 10px;
+  }
 
-    @media screen and (max-width: 320px) {
-        .profile__name{
-            width: 200px;
-            font-size: 20px;
-        } 
-    }
-
-    @media screen and (max-width: 320px) {
-        .profile__edit{
-            padding-top: 0px;
-        }
-    }
-
-    @media screen and (max-width: 320px) {
-        .profile__add{
-            padding-top: 10px;
-        }
-    }
+  .profile__edit {
+    padding-top: 0px;
+  }
+}

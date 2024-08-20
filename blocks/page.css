@@ -2,5 +2,7 @@
     background-color: black;
     font-family: inter, normal, italic;
     width: 100%;
+    display: flex;
     justify-content: center;
+    flex-direction: column;
 }
