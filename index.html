@@ -1,49 +1,88 @@
 <!DOCTYPE html>
 <html lang="es">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="todo sobre estados unidos" />
-    <meta name="keywords" content="usa ciudades" />
-    <meta name="author" content="yaider arias" />
+    <meta charset="UTF-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+    <meta name="description" content="todo sobre estados unidos" >
+    <meta name="keywords" content="usa citys" >
+    <meta name="author" content="yaider arias" >
     <title>around of usa</title>
-    <link rel="stylesheet" href="./page/index.css" />
+    <link rel="stylesheet" href="./page/index.css" >
   </head>
   <body>
     <div class="page">
-      <div class="popup">
-        <button class="popup__button">
+      <div class="popup" id="popup__edit">
           <img
+          id="popup__button-edit"
             class="popup__icon-closed"
             src="./images/closed-button.png"
             alt="icon-closed"
-          />
-        </button>
+          >
         <form class="form">
           <p class="form__title">editar perfil</p>
           <input
             type="text"
             class="form__name"
             value="Jacques Cousteau"
-            name="name"
             placeholder="nombre"
             id="input-name"
-          />
-          <hr class="form__line" />
+          >
+          <hr class="form__line" >
           <input
             type="text"
             class="form__about"
             value="Explorador"
-            name="name"
             placeholder="sobre mi"
             id="input-about"
-          />
-          <hr class="form__line" />
-          <input type="submit" class="form__button" />
+          >
+          <hr class="form__line" >
+          <input type="submit" class="form__button" >
         </form>
       </div>
+      <div class="popup" id="popup__add">
+          <img
+          id="popup__button-add"
+            class="popup__add-closed"
+            src="./images/closed-button.png"
+            alt="icon-closed"
+          >
+        <form class="form-add">
+          <p class="form__add-title">New Place</p>
+          <input
+            type="text"
+            class="form__title-input"
+            placeholder="Title"
+            id="input-title"
+          >
+          <hr class="form__add-line" >
+          <input
+            type="text"
+            class="form__place"
+            placeholder="Place"
+            id="input-place"
+          >
+          <hr class="form__line" >
+          <input type="submit" class="form__add-button" >
+        </form>
+      </div>
+      <div class="popup" id="popup__image">
+        <div class="popup__container">
+        <img
+        id="popup__image-button"
+          class="popup__image-closed"
+          src="./images/closed-button.png"
+          alt="icon-closed"
+        >
+        <img
+        class="popup__image-place"
+        src=""
+        alt=""
+        >
+        <h3 class="popup__image-title"></h3>
+        </div>
+    </div>
       <header class="header">
-        <img class="header__logo" src="./images/logo.svg" alt="logo-around" />
+        <img class="header__logo" src="./images/logo.svg" alt="logo-around" >
         <hr class="header__line" />
       </header>
       <div class="profile">
@@ -51,7 +90,7 @@
           class="profile__image"
           src="./images/Avatar.png"
           alt="image-profile"
-        />
+        >
         <div class="profile__info">
           <p class="profile__name">Jacques Cousteau</p>
           <p class="profile__ocupation">Explorador</p>
@@ -61,94 +100,38 @@
             class="profile__icon-edit"
             src="./images/Edit-Button.png"
             alt="icon-edit"
-          />
+          >
         </button>
         <button class="profile__add">
           <img
             class="profile__icon-add"
             src="./images/Add-Button.png"
             alt="icon-add"
-          />
+          >
         </button>
       </div>
-      <section class="elements">
-        <div class="elements__container">
-          <div class="elements__cards">
-            <img
-              class="elements__image"
-              src="./images/valle.jpg"
-              alt="image-valle"
-            />
-            <div class="elements__description">
-              <p class="elements__title">Valle de Yosemite</p>
-              <img
-                class="elements__icon"
-                src="./images/Group.png"
-                alt="like-icon"
-              />
-            </div>
-          </div>
-          <div class="elements__cards">
-            <img class="elements__image" src="./images/lago.jpg" alt="" />
-            <div class="elements__description">
-              <p class="elements__title">Lago Louise</p>
-              <img
-                class="elements__icon"
-                src="./images/Group.png"
-                alt="like-icon"
-              />
-            </div>
-          </div>
-          <div class="elements__cards">
-            <img class="elements__image" src="./images/montañas.jpg" alt="" />
-            <div class="elements__description">
-              <p class="elements__title">Montañas Calvas</p>
-              <img
-                class="elements__icon"
-                src="./images/Group.png"
-                alt="like-icon"
-              />
-            </div>
-          </div>
-          <div class="elements__cards">
-            <img class="elements__image" src="./images/latemar.jpg" alt="" />
-            <div class="elements__description">
-              <p class="elements__title">Latemar</p>
-              <img
-                class="elements__icon"
-                src="./images/Group.png"
-                alt="like-icon"
-              />
-            </div>
-          </div>
-          <div class="elements__cards">
-            <img class="elements__image" src="./images/vanois.jpg" alt="" />
-            <div class="elements__description">
-              <p class="elements__title">Vanois National...</p>
-              <img
-                class="elements__icon"
-                src="./images/Group.png"
-                alt="like-icon"
-              />
-            </div>
-          </div>
-          <div class="elements__cards">
-            <img class="elements__image" src="./images/lago-di.jpg" alt="" />
-            <div class="elements__description">
-              <p class="elements__title">Lago di Braies</p>
-              <img
-                class="elements__icon"
-                src="./images/Group.png"
-                alt="like-icon"
-              />
-            </div>
-          </div>
+      <div class="elements"></div>
           <footer class="footer">
             <p class="footer__text">© 2020 yaider arias</p>
           </footer>
-        </div>
-      </section>
     </div>
-    <script src="./scripts/index.js"></script>
+    <template class="elements__container" id="elements__container">
+      <div class="elements__cards">
+        <img 
+        src="./images/trash-icon-remove.svg"
+        class="elements__remove"
+        alt="trash-icon">
+        <img
+          class="elements__image"
+          src=""
+          alt=""
+        >
+        <div class="elements__description">
+          <p class="elements__title"></p>
+          <div class="elements__icon"></div>
+        </div>
+      </div>
+    </template>
+    <script src="./index.js"></script>
   </body>
 </html>

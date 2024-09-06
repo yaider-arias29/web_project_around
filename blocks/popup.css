@@ -7,6 +7,27 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    top: 0;
+    z-index: 20;
+}
+
+.popup__container{
+    position: relative;
+    min-width: 300px;
+}
+
+.popup__image-place{
+    max-width: 75vw;
+    max-height: 75vh;
+}
+
+.popup__image-title{
+    color: white;
+    min-width: 300px;
+}
+
+#popup__image-button{
+    position: absolute;
 }
 
 .popup_opened{
