@@ -1,7 +1,7 @@
 .form{
     background-color: white;
-    width: 282px;
-    height: 322px;
+    width: 430px;
+    height: 330px;
     list-style-type: none;
     padding-left: 10px; 
     padding-top: 30px;
@@ -12,29 +12,27 @@
     font-family: Inter;
     font-size: 18px;
     font-weight: 900;
-    line-height: 21.78px;
-    text-align: left;
+    line-height: 24.78px;
+    text-align: center;
     width: 238px;
-    padding-bottom: 60px;
+    padding-left: 30px;
+    padding-bottom: 20px;
 }
 
-.form__line{
-    width: 238px;
-    padding-bottom: 1px;
-    border-style: none;
-    background-color: #959595;
-}
 
-.form__name{
-    padding-top: 20px;
-    padding-left: 20px;
+.form__input{
+    width: 320px;
     border: none;
+    text-align: start;
+    line-height: 26.94px;
+    margin: 0 auto;
+    padding-left: 100px;
+    padding-bottom: 10px;
+
 }
 
-.form__about{
-    padding-top: 20px;
-    padding-left: 20px;
-    border: none;   
+.form__input-error{
+    color: red;
 }
 
 .form__button{
@@ -50,7 +48,7 @@
     margin: auto;
     display: flex;
     justify-content: center;
-    padding-top: 5px;
+    margin-top: 15px;
 }
 
 

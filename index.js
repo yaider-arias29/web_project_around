@@ -9,7 +9,7 @@ const popupClosed = document.querySelector("#popup__button-edit");
 const popupAddClosed = document.querySelector("#popup__button-add");
 const popupImageClosed = document.querySelector("#popup__image-button");
 const formProfile = document.querySelector(".form");
-const formCard = document.querySelector(".form-add");
+const formCard = document.querySelector("#form__add");
 const profileName = document.querySelector(".profile__name");
 const profileAbout = document.querySelector(".profile__ocupation");
 const inputName = document.querySelector("#input-name");
@@ -73,28 +73,40 @@ cardArea.append(newCard);
 
 function openPopupProfile() {
     popupProfile.classList.add("popup_opened");
+    document.addEventListener("keydown", closeOnEsc);
+    document.addEventListener("click", closeOnClick);
 }
 
 function closePopupProfile() {
     popupProfile.classList.remove("popup_opened");
+    document.removeEventListener("keydown", closeOnEsc);
+    document.removeEventListener("click", closeOnClick);
 }
 
 function openPopupCards() {
     popupCards.classList.add("popup_opened");
+    document.addEventListener("keydown", closeOnEsc);
+    document.addEventListener("click", closeOnClick);
 }
 
 function closePopupCards() {
     popupCards.classList.remove("popup_opened");
+    document.removeEventListener("keydown", closeOnEsc);
+    document.removeEventListener("click", closeOnClick)
 }
 
 function openPopupImage(title, link) {
   popupImage.classList.add("popup_opened");
   popupImageTitle.textContent = title;
   popupImagePlace.src = link;
+  document.addEventListener("keydown", closeOnEsc);
+  document.addEventListener("click", closeOnClick)
 }
 
 function closePopupImage() {
   popupImage.classList.remove("popup_opened");
+  document.removeEventListener("keydown", closeOnEsc);
+  document.removeEventListener("click", closeOnClick)
 }
 
 profileButton.addEventListener("click", openPopupProfile);
@@ -117,5 +129,20 @@ const newCard = createCard(inputTitle.value, inputPlace.value);
 cardArea.prepend(newCard);
     closePopupCards();
 });
+
+closeOnEsc = (evt) => {
+if ( (evt.key) === "Escape") {
+  closePopupCards();
+  closePopupProfile();
+   }
+};
+
+closeOnClick = (evt) => {
+  if(evt.target.classList.contains("popup_opened")) {
+    closePopupCards();
+    closePopupProfile();
+    closePopupImage();
+  }
+};
 
 

@@ -33,3 +33,7 @@
 .popup_opened{
      display:flex;
 }
+
+.popup__closed{
+    padding-left: 460px;
+}
