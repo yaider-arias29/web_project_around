@@ -51,4 +51,10 @@
     margin-top: 15px;
 }
 
+.form__submit_inactive{
+    opacity: 0.5;
+    pointer-events: none;
+    cursor: not-allowed;
+}
+
 
