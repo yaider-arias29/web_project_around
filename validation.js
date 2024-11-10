@@ -12,7 +12,7 @@ const showInputError = (formElement, inputElement, errorMessage, settings) => {
   
   const checkInputValidity = (formElement, inputElement, settings) => {
     if (!inputElement.validity.valid) {
-      showInputError(formElement, inputElement, inputElement.validationMessage, settings);
+      showInputError(formElement, inputElement, inputElement.validationMessage, settings)
     } else {
       hideInputError(formElement, inputElement, settings);
     }
