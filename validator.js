@@ -55,7 +55,7 @@ const toggleButtonState = (inputList, buttonElement, settings) => {
     });
   };
 
-  const settings = {
+ const settings = {
     formSelector: ".form",
     inputSelector: ".form__input",
     buttonElement: ".form__button",

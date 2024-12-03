@@ -1,3 +1,13 @@
+import card from "./cards.js";
+import formValidator from "./formValidator.js";
+import {initialCards, 
+  openPopupProfile, 
+  closePopupProfile,
+  openPopupCards,
+  closePopupCards,
+  openPopupImage,
+  closePopupImage
+} from "./utils.js";
 const profileButton = document.querySelector(".profile__edit");
 const profileAddButton = document.querySelector(".profile__add");
 const popupProfile = document.querySelector("#popup__edit");
@@ -18,96 +28,26 @@ const inputTitle = document.querySelector("#input-title");
 const inputPlace = document.querySelector("#input-place");
 const cardTemplate = document.querySelector(".elements__container").content;
 const cardArea = document.querySelector(".elements");
-const initialCards = [
-    {
-      name: "Valle de Yosemite",
-      link: "https://practicum-content.s3.us-west-1.amazonaws.com/new-markets/WEB_sprint_5/ES/yosemite.jpg"
-    },
-    {
-      name: "Lago Louise",
-      link: "https://practicum-content.s3.us-west-1.amazonaws.com/new-markets/WEB_sprint_5/ES/lake-louise.jpg"
-    },
-    {
-      name: "Montañas Calvas",
-      link: "https://practicum-content.s3.us-west-1.amazonaws.com/new-markets/WEB_sprint_5/ES/bald-mountains.jpg"
-    },
-    {
-      name: "Latemar",
-      link: "https://practicum-content.s3.us-west-1.amazonaws.com/new-markets/WEB_sprint_5/ES/latemar.jpg"
-    },
-    {
-      name: "Parque Nacional de la Vanoise",
-      link: "https://practicum-content.s3.us-west-1.amazonaws.com/new-markets/WEB_sprint_5/ES/vanoise.jpg"
-    },
-    {
-      name: "Lago di Braies",
-      link: "https://practicum-content.s3.us-west-1.amazonaws.com/new-markets/WEB_sprint_5/ES/lago.jpg"
-    },
-  ];
-
-function createCard (name, link) {
-    const card = cardTemplate.querySelector(".elements__cards").cloneNode(true);
-    const cardImage = card.querySelector(".elements__image");
-    const cardTitle = card.querySelector(".elements__title");
-    const cardLikeButton = card.querySelector(".elements__icon");
-    const cardRemoveButton = card.querySelector(".elements__remove");
-    cardRemoveButton.addEventListener("click", function() {
-      card.remove()
-    });
-    cardLikeButton.addEventListener("click", function() {
-      cardLikeButton.classList.toggle("elements__icon-active");
-    });
-    cardImage.addEventListener("click", function () {
-      openPopupImage(name, link);
-    });
-    cardTitle.textContent = name;
-    cardImage.src = link;
-    cardImage.alt = name;
-    return card;
-}
 
 initialCards.forEach(function (item) {
-const newCard = createCard(item.name, item.link);
-cardArea.append(newCard);
+const newCard = new card(item.name, item.link);
+cardArea.append(newCard.getCards());
 });
 
-function openPopupProfile() {
-    popupProfile.classList.add("popup_opened");
-    document.addEventListener("keydown", closeOnEsc);
-    document.addEventListener("click", closeOnClick);
-}
+const settings = {
+  formSelector: ".form",
+  inputSelector: ".form__input",
+  buttonElement: ".form__button",
+  inactiveButtonClass: "form__submit_inactive",
+  inputErrorClass: "form__input-error",
+  errorClass: "form__error_visible"
+};
 
-function closePopupProfile() {
-    popupProfile.classList.remove("popup_opened");
-    document.removeEventListener("keydown", closeOnEsc);
-    document.removeEventListener("click", closeOnClick);
-}
+const validationProfileForm = new formValidator(formProfile, settings)
+validationProfileForm.enableValidation();
 
-function openPopupCards() {
-    popupCards.classList.add("popup_opened");
-    document.addEventListener("keydown", closeOnEsc);
-    document.addEventListener("click", closeOnClick);
-}
-
-function closePopupCards() {
-    popupCards.classList.remove("popup_opened");
-    document.removeEventListener("keydown", closeOnEsc);
-    document.removeEventListener("click", closeOnClick)
-}
-
-function openPopupImage(title, link) {
-  popupImage.classList.add("popup_opened");
-  popupImageTitle.textContent = title;
-  popupImagePlace.src = link;
-  document.addEventListener("keydown", closeOnEsc);
-  document.addEventListener("click", closeOnClick)
-}
-
-function closePopupImage() {
-  popupImage.classList.remove("popup_opened");
-  document.removeEventListener("keydown", closeOnEsc);
-  document.removeEventListener("click", closeOnClick)
-}
+const validationProfileCard = new formValidator(formCard, settings)
+validationProfileCard.enableValidation();
 
 profileButton.addEventListener("click", openPopupProfile);
 profileAddButton.addEventListener("click", openPopupCards);
@@ -130,19 +70,9 @@ cardArea.prepend(newCard);
     closePopupCards();
 });
 
-closeOnEsc = (evt) => {
-if ( (evt.key) === "Escape") {
-  closePopupCards();
-  closePopupProfile();
-   }
-};
 
-closeOnClick = (evt) => {
-  if(evt.target.classList.contains("popup_opened")) {
-    closePopupCards();
-    closePopupProfile();
-    closePopupImage();
-  }
-};
+
+
+
 
 
