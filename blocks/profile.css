@@ -47,14 +47,15 @@
   margin-left: 80px;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 570px) {
   .profile {
     flex-direction: column;
     justify-content: center;
-    align-items: center;
   }
   .profile__name {
     font-size: 20px;
+    font-weight: 200;
+    text-align: center;
   }
   .profile__add {
     padding: 0;
@@ -63,5 +64,13 @@
 
   .profile__edit {
     padding-top: 0px;
+  }
+}
+
+
+@media screen and (max-width: 760px) {
+  .profile__name {
+    font-size: 20px;
+    font-weight: 200;
   }
 }

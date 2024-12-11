@@ -7,6 +7,7 @@
   margin: auto;
   max-width: 882px;
   flex-wrap: wrap;
+  align-items: center;
 }
 
 .elements__cards {
@@ -40,13 +41,16 @@
 }
 
 .elements__title {
-  width: 246px;
+  width: 200px;
   font-family: Inter;
   font-size: 24px;
   font-weight: 900;
   line-height: 29.05px;
   text-align: left;
   padding-left: 10px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .elements__icon {

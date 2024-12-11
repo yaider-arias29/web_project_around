@@ -22,7 +22,7 @@ export default class formValidator {
 
         }
     }
-    toggleButtonSteate(inputElement) {
+    toggleButtonSteate(buttonElement) {
         if (hasInvalidInput (inputList)) {
             buttonElement.classList.add(this.settings.inactiveButtonClass);
           } else {
