@@ -1,3 +1,3 @@
 # Tripleten web_project_around
 PROYECTO CREADO CON ACCIONES INTERACTIVAS UTILIZANDO EL COMPLEMENTO DE JAVASCRIPT Y CON SUS DEBIDOS ESTILOS BASADOS EN CSS 
-guardado en https://github.com/yaider-arias29/web_project_around.git
+guardado en https://github.com/yaider-arias29/web_project_around.git. Contiene diferentes funcionalidades entre las que se encuentran el acceso a popups tanto para editar perfil, agregar tarjetas de imagen y titulo, y abrir la imagen en un tamaño mas grande. tambien contiene la funcionalidad de darle like a las imagenes con la representacion de un corazon que se pone negro al hacerle click y un icono que al hacer click elimina las imagenes, se utiliza javascript con paradigma de programacion orientada a objetos y separado por clases.

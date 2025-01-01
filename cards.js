@@ -1,8 +1,9 @@
 const cardTemplate = document.querySelector(".elements__container");
-export default class card {
-constructor(name, link){
+export default class Card {
+constructor(name, link, handleClickImage){
 this.name = name,
 this.link = link
+this.handleClickImage = handleClickImage
 }
 
 getTemplate() {
@@ -24,6 +25,9 @@ this.toggleLike();
 this.cardRemoveButton.addEventListener("click", () => {
     this.removeCard();
 });
+this.cardImage.addEventListener("click", ()=>{
+  this.handleClickImage()
+  })
 }
 
 setProperties() {
