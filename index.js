@@ -3,7 +3,10 @@ import formValidator from "./formValidator.js";
 import {initialCards,  
   closePopupProfile,
   closePopupCards,
-  closePopupImage
+  closePopupImage,
+  openPopupCards,
+  openPopupImage,
+  openPopupProfile
 } from "./utils.js";
 import popupWhitForm from "./PopupWithForm.js";
 import popupWhitImage from "./popupWhitImage.js";
@@ -14,8 +17,8 @@ const profileAddButton = document.querySelector(".profile__add");
 const popupClosed = document.querySelector("#popup__button-edit");
 const popupAddClosed = document.querySelector("#popup__button-add");
 const popupImageClosed = document.querySelector("#popup__image-button");
-const formProfile = document.querySelector(".form");
-const formCard = document.querySelector("#form__add");
+const formProfile = document.querySelector(".form-profile");
+const formCard = document.querySelector(".form-add");
 const profileName = document.querySelector(".profile__name");
 const profileAbout = document.querySelector(".profile__ocupation");
 const inputName = document.querySelector("#input-name");
@@ -34,7 +37,7 @@ popupImage.setEventListeners();
 
 initialCards.forEach(function (item) {
 const newCard = new card(item.name, item.link, () => {
-popupImage.open(item.name, item.link)
+popupImage.openPopupCards(item.name, item.link)
 });
 cardArea.append(newCard.getCards());
 });
@@ -55,10 +58,10 @@ const validationProfileCard = new formValidator(formCard, settings)
 validationProfileCard.enableValidation();
 
 profileButton.addEventListener("click", () =>{
-  popupProfile.open()
+  popupProfile.openPopupProfile()
 });
 profileAddButton.addEventListener("click", () =>{
-  popupCards.open()
+  popupCards.openPopupImage()
 });
 popupAddClosed.addEventListener("click", closePopupCards);
 popupClosed.addEventListener("click", closePopupProfile);
