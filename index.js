@@ -17,8 +17,8 @@ const profileAddButton = document.querySelector(".profile__add");
 const popupClosed = document.querySelector("#popup__button-edit");
 const popupAddClosed = document.querySelector("#popup__button-add");
 const popupImageClosed = document.querySelector("#popup__image-button");
-const formProfile = document.querySelector(".form-profile");
-const formCard = document.querySelector(".form-add");
+const formProfile = document.querySelector("#form-profile");
+const formCard = document.querySelector("#form-add");
 const profileName = document.querySelector(".profile__name");
 const profileAbout = document.querySelector(".profile__ocupation");
 const inputName = document.querySelector("#input-name");
@@ -29,7 +29,7 @@ const cardArea = document.querySelector(".elements");
 const popupProfile = new popupWhitForm("#popup__edit");
 const popupCards = new popupWhitForm("#popup__add");
 const popupImage = new popupWhitImage("#popup__image");
-
+//popupImage.open();
 popupProfile.setEventListeners();
 popupCards.setEventListeners();
 popupImage.setEventListeners();
@@ -37,7 +37,7 @@ popupImage.setEventListeners();
 
 initialCards.forEach(function (item) {
 const newCard = new card(item.name, item.link, () => {
-popupImage.openPopupCards(item.name, item.link)
+popupImage.open(item.name, item.link)
 });
 cardArea.append(newCard.getCards());
 });
@@ -58,10 +58,10 @@ const validationProfileCard = new formValidator(formCard, settings)
 validationProfileCard.enableValidation();
 
 profileButton.addEventListener("click", () =>{
-  popupProfile.openPopupProfile()
+  popupProfile.open()
 });
 profileAddButton.addEventListener("click", () =>{
-  popupCards.openPopupImage()
+  popupCards.open()
 });
 popupAddClosed.addEventListener("click", closePopupCards);
 popupClosed.addEventListener("click", closePopupProfile);

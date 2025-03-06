@@ -19,11 +19,11 @@ export default class Popup{
         }
     }
 
-    handleClickOutside(){
-        return(evt.target.classlist.contains("popup_opened"))
+    handleClickOutside(evt){
+        return(evt.target.classList.contains("popup_opened"))
     }
 
-    setEventListeners(){
+    setEventListeners(evt){
         this.closeButton.addEventListener("click", ()=>{
             this.close()
         })

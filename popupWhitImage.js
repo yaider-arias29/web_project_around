@@ -7,8 +7,8 @@ this.imageElement = this.popupElement.querySelector(".popup__image-place")
 this.titleElement = this.popupElement.querySelector(".popup__image-title")
    }
    open(name, link){
-    super.open()
-    this.titleElement.textContent = name
-    this.imageElement.src = link
+   this.titleElement.textContent = name
+   this.imageElement.src = link
+   super.open()
    }
 }
