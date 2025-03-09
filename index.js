@@ -1,5 +1,5 @@
-import card from "./cards.js";
-import formValidator from "./formValidator.js";
+import card from "./components/cards.js";
+import formValidator from "./components/formValidator.js";
 import {initialCards,  
   closePopupProfile,
   closePopupCards,
@@ -7,9 +7,9 @@ import {initialCards,
   openPopupCards,
   openPopupImage,
   openPopupProfile
-} from "./utils.js";
-import popupWhitForm from "./PopupWithForm.js";
-import popupWhitImage from "./popupWhitImage.js";
+} from "./components/utils.js";
+import popupWhitForm from "./components/PopupWithForm.js";
+import popupWhitImage from "./components/popupWhitImage.js";
 
 
 const profileButton = document.querySelector(".profile__edit");
