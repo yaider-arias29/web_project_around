@@ -10,6 +10,7 @@ import {initialCards,
 } from "./components/utils.js";
 import popupWhitForm from "./components/PopupWithForm.js";
 import popupWhitImage from "./components/popupWhitImage.js";
+import Api from "./components/Api.js"
 
 
 const profileButton = document.querySelector(".profile__edit");
