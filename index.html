@@ -1,150 +1,101 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" >
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
-    <meta name="description" content="todo sobre estados unidos" >
-    <meta name="keywords" content="usa citys" >
-    <meta name="author" content="yaider arias" >
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="todo sobre estados unidos">
+    <meta name="keywords" content="usa citys">
+    <meta name="author" content="yaider arias">
     <title>around of usa</title>
-    <link rel="stylesheet" href="./page/index.css" >
-  </head>
-  <body>
+    <link rel="stylesheet" href="./page/index.css">
+</head>
+<body>
     <div class="page">
-      <div class="popup" id="popup__edit">
-          <img
-          id="popup__button-edit"
-            class="popup__closed"
-            src="./images/closed-button.png"
-            alt="icon-closed"
-          >
-        <form class="form"
-        id="form-profile">
-          <p class="form__title">editar perfil</p>
-          <input
-            type="text"
-            class="form__input"
-            minlength="2"
-            maxlength="20"
-            value="Jacques Cousteau"
-            placeholder="nombre"
-            id="input-name"
-            required
-          >
-          <span class="form__input-error input-name-error"></span>
-          <input
-            type="text"
-            class="form__input"
-            minlength="2"
-            maxlength="20"
-            value="Explorador"
-            placeholder="sobre mi"
-            id="input-about"
-            required
-          >
-          <span class="form__input-error input-about-error"></span>
-          <input type="submit" class="form__button" >
-        </form>
-      </div>
-      <div class="popup" id="popup__add">
-          <img
-          id="popup__button-add"
-            class="popup__closed"
-            src="./images/closed-button.png"
-            alt="icon-closed"
-          >
-        <form class="form"
-        id="form-add">
-          <p class="form__title">New Place</p>
-          <input
-            type="text"
-            class="form__input"
-            minlength="2"
-            maxlength="20"
-            placeholder="Title"
-            id="input-title"
-            required
-          >
-          <span class="form__input-error input-title-error"></span>
-          <input
-            type="url"
-            class="form__input"
-            minlength="2"
-            maxlength="200"
-            placeholder="Place"
-            id="input-place"
-            required
-          >
-          <span class="form__input-error input-place-error"></span>
-          <input type="submit" class="form__button" required >
-        </form>
-      </div>
-      <div class="popup" id="popup__image">
-        <div class="popup__container">
-        <img
-        id="popup__image-button"
-          class="popup__closed"
-          src="./images/closed-button.png"
-          alt="icon-closed"
-        >
-        <img
-        class="popup__image-place"
-        src=" "
-        alt=" "
-        >
-        <h3 class="popup__image-title"></h3>
+        <div class="popup popup_type_edit"> <div class="popup__container">
+                <button type="button"  class="popup__closed"></button>
+                <form class="popup__form" name="edit-profile">  <h3 class="popup__title">Editar perfil</h3>
+                    <input type="text" class="popup__input popup__input_type_name" minlength="2" maxlength="20" placeholder="Nombre" id="input-name" name="name" required> 
+                   <span class="popup__input-error input-name-error"></span>
+                    <input type="text" class="popup__input popup__input_type_about" minlength="2" maxlength="20" placeholder="Acerca de mí" id="input-about" name="about" required>
+                    <span class="popup__input-error input-about-error"></span>
+                    <button type="submit" class="popup__button">Guardar</button> </form>
+            </div>
         </div>
+
+        <div class="popup popup_type_add"> <div class="popup__container">
+                <button type="button" class="popup__closed"></button> 
+                <form class="popup__form" name="add-card"> 
+                    <h3 class="popup__title">Nuevo lugar</h3>
+                    <input type="text" class="popup__input popup__input_type_title" minlength="2" maxlength="30" placeholder="Título" id="input-title" name="title" required>
+                    <span class="popup__input-error input-title-error"></span>
+                    <input type="url" class="popup__input popup__input_type_link" placeholder="Enlace a la imagen" id="input-place" name="link" required>
+                    <span class="popup__input-error input-place-error"></span>
+                    <button type="submit" class="popup__button popup__button-inactive">Crear</button> </form>
+            </div>
+        </div>
+
+        <div class="popup popup_type_image"> <div class="popup__container popup__container_type_image">
+                <button type="button" class="popup__closed"></button> <img class="popup__image-place" src=" " alt=" ">
+                <h3 class="popup__image-title"></h3>
+            </div>
+        </div>
+
+        <div class="popup popup_type_confirm" id="popup__confirmation">
+            <div class="popup__container popup__container_type_confirm">
+                <button type="button" class="popup__closed"></button>
+                <form class="popup__form popup__form_type_confirm" name="confirm-delete">
+                   <h3 class="popup__title popup__title_type_confirm">¿Estás seguro?</h3>
+                    <button type="submit" class="popup__button popup__button_type_confirm">Sí</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="popup popup_type_avatar">
+    <div class="popup__container">
+        <button type="button" class="popup__closed"></button>
+        <form class="popup__form" name="edit-avatar">
+            <h3 class="popup__title">Cambiar foto de perfil</h3>
+            <input type="url" class="popup__input popup__input_type_avatar-link" placeholder="Enlace a la imagen" id="input-avatar-link" name="avatar" required>
+            <span class="popup__input-error input-avatar-link-error"></span>
+            <button type="submit" class="popup__button">Guardar</button>
+        </form>
     </div>
-      <header class="header">
-        <img class="header__logo" src="./images/logo.svg" alt="logo-around" >
-      </header>
-      <div class="profile">
-        <img
-          class="profile__image"
-          src="./images/Avatar.png"
-          alt="image-profile"
-        >
-        <div class="profile__info">
-          <p class="profile__name">Jacques Cousteau</p>
-          <p class="profile__ocupation">Explorador</p>
+</div>
+
+        <header class="header">
+            <img class="header__logo" src="./images/logo.svg" alt="logo-around">
+        </header>
+        <div class="profile">
+            <div class="profile__image-container">
+            <img class="profile__image" src="./images/Avatar.png" alt="image-profile">
+            <div class="profile__image-overlay"></div> 
+            </div>
+            <div class="profile__info">
+                <p class="profile__name">Jacques Cousteau</p>
+                <p class="profile__ocupation">Explorador</p>
+            </div>
+            <button class="profile__edit">
+                <img class="profile__icon-edit" src="./images/Edit-Button.png" alt="icon-edit">
+            </button>
+            <button class="profile__add">
+                <img class="profile__icon-add" src="./images/Add-Button.png" alt="icon-add">
+            </button>
         </div>
-        <button class="profile__edit">
-          <img
-            class="profile__icon-edit"
-            src="./images/Edit-Button.png"
-            alt="icon-edit"
-          >
-        </button>
-        <button class="profile__add">
-          <img
-            class="profile__icon-add"
-            src="./images/Add-Button.png"
-            alt="icon-add"
-          >
-        </button>
-      </div>
-      <div class="elements"></div>
-          <footer class="footer">
+        <div class="elements"></div>
+        <footer class="footer">
             <p class="footer__text">© 2020 yaider arias</p>
-          </footer>
+        </footer>
     </div>
     <template class="elements__container" id="elements__container">
-      <div class="elements__cards">
-        <img 
-        src="./images/trash-icon-remove.svg"
-        class="elements__remove"
-        alt="trash-icon">
-        <img
-          class="elements__image"
-          src=""
-          alt=""
-        >
-        <div class="elements__description">
-          <p class="elements__title"></p>
-          <div class="elements__icon"></div>
+        <div class="elements__cards">
+            <img src="./images/trash-icon-remove.svg" class="elements__remove" alt="trash-icon">
+            <img class="elements__image" src="" alt="">
+            <div class="elements__description">
+                <p class="elements__title"></p>
+                <div class="elements__icon"></div>
+            </div>
         </div>
-      </div>
     </template>
-    <script type="module" src="./index.js"></script>
-  </body>
+    <script type="module" src="page/index.js"></script>
+</body>
 </html>
